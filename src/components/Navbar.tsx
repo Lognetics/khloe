@@ -34,7 +34,7 @@ export default function Navbar() {
           <span className="grid h-9 w-9 place-items-center rounded-full bg-charcoal text-offwhite font-display text-sm font-semibold">
             KO
           </span>
-          <span className="hidden flex-col leading-none sm:flex">
+          <span className="flex flex-col leading-none">
             <span className="font-display text-[15px] font-semibold tracking-tight">{SITE.name}</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted">{SITE.tagline}</span>
           </span>
