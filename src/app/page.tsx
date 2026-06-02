@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeroSlider from "@/components/HeroSlider";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import {
@@ -22,7 +23,10 @@ const TRUST_MARQUEE = [
 export default function HomePage() {
   return (
     <>
-      {/* ---------- HERO ---------- */}
+      {/* ---------- NEW: DARK REV SLIDER ---------- */}
+      <HeroSlider />
+
+      {/* ---------- HERO (original — unchanged) ---------- */}
       <section className="relative overflow-hidden">
         <div className="container-x grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr]">
           <div>

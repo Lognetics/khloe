@@ -43,10 +43,20 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        kenburns: {
+          "0%": { transform: "scale(1) translateY(0)" },
+          "100%": { transform: "scale(1.12) translateY(-1.5%)" },
+        },
+        "slide-in": {
+          "0%": { opacity: "0", transform: "translateY(28px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.7s cubic-bezier(0.16,1,0.3,1) both",
         marquee: "marquee 28s linear infinite",
+        kenburns: "kenburns 7s ease-out both",
+        "slide-in": "slide-in 0.8s cubic-bezier(0.16,1,0.3,1) both",
       },
     },
   },
