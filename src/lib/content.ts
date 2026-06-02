@@ -115,7 +115,17 @@ export const BELIEFS = [
   { title: "Positioning Shapes Perception", body: "You either decide how you're seen, or the market decides for you." },
 ];
 
-export const ARTICLES = [
+export type Article = {
+  slug: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  readTime: string;
+  date: string;
+  body: string[];
+};
+
+export const ARTICLES: Article[] = [
   {
     slug: "why-most-businesses-sound-the-same",
     title: "Why Most Businesses Sound The Same",
@@ -124,6 +134,12 @@ export const ARTICLES = [
       "If your customers can swap your name for a competitor's and the sentence still works, you have a positioning problem.",
     readTime: "6 min read",
     date: "May 2026",
+    body: [
+      "Run a quick test. Take your homepage headline and replace your company name with your biggest competitor's. Does the sentence still make sense? For most businesses, it does — perfectly. That's the tell. You haven't said anything only you could say.",
+      "It happens for an understandable reason: it feels safe to describe what you do in the language everyone in your category already uses. \"Innovative.\" \"Customer-focused.\" \"End-to-end solutions.\" These words feel professional, but they're wallpaper. Buyers have learned to read straight past them because every option says the same thing.",
+      "The fix isn't louder adjectives — it's a decision. Decide the one thing you want to be known for, the thing a specific customer would genuinely miss if you disappeared. Then build your language around that, even at the cost of sounding less like everyone else. Especially at that cost.",
+      "Sounding different isn't a creative exercise. It's the visible result of having actually chosen a position. When the choice is real, the words take care of themselves.",
+    ],
   },
   {
     slug: "visibility-without-positioning-is-expensive",
@@ -133,6 +149,12 @@ export const ARTICLES = [
       "More reach amplifies whatever you already are. If the message is unclear, you're paying to confuse more people, faster.",
     readTime: "5 min read",
     date: "May 2026",
+    body: [
+      "Visibility is an amplifier, not a strategy. It takes whatever message you already have and pushes it in front of more people. If that message is clear and distinct, reach compounds your advantage. If it's vague, you're simply paying to confuse a larger audience.",
+      "This is why so many businesses pour money into content and ads and feel like they're shouting into a void. The channels work fine. The problem sits upstream: there's no sharp idea for the audience to grab onto, so attention arrives and then leaks straight back out.",
+      "Before scaling spend, get honest about conversion of attention into memory. When someone hears about you once, can they describe what you're for a week later? If not, more impressions won't save you — they'll just cost more.",
+      "Positioning is the cheapest growth lever you have, because it makes every expensive lever work harder. Fix the message first; then turn up the volume.",
+    ],
   },
   {
     slug: "building-a-brand-clients-remember",
@@ -142,6 +164,12 @@ export const ARTICLES = [
       "Memorability isn't about being everywhere. It's about meaning one specific thing in your customer's mind.",
     readTime: "7 min read",
     date: "Apr 2026",
+    body: [
+      "Memorable brands aren't the ones with the biggest presence. They're the ones that own a single, specific idea in the customer's mind. When a need comes up, one name surfaces first — not because it shouts loudest, but because it has come to mean exactly that thing.",
+      "The mistake founders make is trying to be remembered for everything. Full-service. Any industry. Every use case. But a mind can't hold a brand that stands for ten things — it rounds you down to nothing. Breadth feels safe and reads as forgettable.",
+      "Pick the corner of the market you want to own and repeat it with discipline. Say it on the homepage, on sales calls, in your content, in how you onboard. Repetition isn't boring; it's how meaning gets installed.",
+      "You'll feel like you're saying the same thing too often long before your audience has heard it enough. That gap is exactly where memorable brands are built.",
+    ],
   },
   {
     slug: "the-hidden-cost-of-generic-messaging",
@@ -151,6 +179,12 @@ export const ARTICLES = [
       "Generic messaging doesn't lose loudly. It quietly raises your cost of every lead, every sale, every hire.",
     readTime: "5 min read",
     date: "Apr 2026",
+    body: [
+      "Generic messaging rarely fails dramatically. There's no single lost deal you can point to. Instead it taxes everything quietly: leads cost a little more, sales cycles run a little longer, and the wrong-fit prospects take up just enough room to crowd out the right ones.",
+      "Because the cost is spread thin, it's easy to misdiagnose. Teams respond by doing more — more content, more outreach, more discounting — when the real issue is that the message never made the choice obvious for the right buyer.",
+      "Specific messaging does the opposite. It repels the wrong people early (a feature, not a bug) and pulls the right ones in already half-convinced. Your funnel gets shorter because the qualifying happened in the words themselves.",
+      "If your messaging is trying not to exclude anyone, it's quietly costing you with everyone. Clarity has a price — being ignorable is more expensive.",
+    ],
   },
   {
     slug: "positioning-before-marketing",
@@ -160,6 +194,12 @@ export const ARTICLES = [
       "The fastest way to make marketing work is to stop marketing for a week and decide what you actually stand for.",
     readTime: "8 min read",
     date: "Mar 2026",
+    body: [
+      "It sounds backwards, but the fastest way to improve your marketing is often to pause it. Not forever — just long enough to answer the questions every campaign silently assumes you've already settled: who is this for, what do we want to be chosen for, and why us over the obvious alternatives?",
+      "Most teams skip straight to execution because execution feels like progress. But tactics built on an undecided position just produce motion. You ship more and learn less, because nothing is anchored to a clear point of view.",
+      "Spend the week getting specific. Interview your best customers and listen for the exact words they use. Map what competitors claim and find the space they've left open. Then commit to a position in a single, plain sentence the whole team can repeat.",
+      "Once that sentence exists, marketing gets dramatically easier — content has a spine, ads have an angle, and sales have a story. Positioning isn't a delay before growth. It's the shortcut.",
+    ],
   },
   {
     slug: "consumer-psychology-of-choice",
@@ -169,6 +209,12 @@ export const ARTICLES = [
       "Customers don't choose the best option. They choose the option they understand fastest. Positioning wins the speed game.",
     readTime: "6 min read",
     date: "Mar 2026",
+    body: [
+      "We like to imagine customers carefully weighing every option and selecting the best one. In reality, people are cognitive minimalists. Faced with too many similar choices, they don't optimize — they pick the option they can understand fastest, or they delay deciding at all.",
+      "This changes what 'winning' means. You're not competing only on quality; you're competing on clarity. The brand that can be grasped in one sentence has a structural advantage over the objectively-better brand that takes three paragraphs to explain.",
+      "Good positioning works with this instinct instead of against it. It hands the buyer an easy mental shortcut: this is what we are, this is who it's for, this is when to choose us. You're reducing the effort it takes to say yes.",
+      "Don't make people work to understand why you matter. The mind rewards whatever it can file quickly — so make yourself easy to file.",
+    ],
   },
 ];
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroSlider from "@/components/HeroSlider";
+import LatestInsights from "@/components/LatestInsights";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import {
@@ -245,23 +246,7 @@ export default function HomePage() {
             </Reveal>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {ARTICLES.slice(0, 3).map((a, i) => (
-              <Reveal key={a.slug} delay={i * 80}>
-                <article className="card group flex h-full flex-col">
-                  <div className="flex items-center gap-3 text-xs text-muted">
-                    <span className="rounded-full bg-brown/10 px-2.5 py-1 font-medium text-brown">
-                      {a.category}
-                    </span>
-                    <span>{a.readTime}</span>
-                  </div>
-                  <h3 className="mt-4 font-display text-xl font-semibold leading-snug">{a.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{a.excerpt}</p>
-                  <span className="mt-5 text-sm font-medium text-charcoal">Read article →</span>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <LatestInsights articles={ARTICLES.slice(0, 3)} />
         </div>
       </section>
 
