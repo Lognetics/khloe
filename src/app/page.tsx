@@ -155,33 +155,33 @@ export default function HomePage() {
       </section>
 
       {/* ---------- SERVICES OVERVIEW ---------- */}
-      <section className="border-y border-charcoal/10 bg-white py-20 md:py-28">
+      <section className="bg-charcoal py-20 text-offwhite md:py-28">
         <div className="container-x">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal className="max-w-xl">
-              <span className="eyebrow">What I do</span>
+              <span className="eyebrow text-white/50 before:bg-gold">What I do</span>
               <h2 className="heading-xl mt-5 text-4xl md:text-5xl">How I help brands stand out</h2>
             </Reveal>
             <Reveal delay={100}>
-              <Link href="/services" className="btn-outline">
+              <Link href="/services" className="btn-ghost-light">
                 View all services →
               </Link>
             </Reveal>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-charcoal/10 bg-charcoal/10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 70}>
                 <Link
                   href="/services"
-                  className="group flex h-full flex-col bg-white p-7 transition-colors hover:bg-offwhite"
+                  className="group flex h-full flex-col bg-charcoal p-7 transition-colors hover:bg-white/5"
                 >
-                  <span className="font-display text-sm font-semibold text-brown">
+                  <span className="font-display text-sm font-semibold text-gold">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="mt-3 font-display text-xl font-semibold">{s.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{s.short}</p>
-                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-charcoal opacity-0 transition-opacity group-hover:opacity-100">
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{s.short}</p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-gold opacity-0 transition-opacity group-hover:opacity-100">
                     Learn more →
                   </span>
                 </Link>
