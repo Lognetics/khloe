@@ -16,54 +16,55 @@ type Slide = {
 const SLIDES: Slide[] = [
   {
     image: "/images/khloe-maroon.jpg",
-    alt: "Khloe Obiegbu, Brand Positioning Strategist",
-    eyebrow: "The Nerdy Strategist",
+    alt: "Khloe Obiegbu",
+    eyebrow: "Khloe Obiegbu · Building GTM Expertise",
     title: (
       <>
-        Brand Positioning <span className="text-gold">Strategist</span>
+        Exploring what it takes to turn a SaaS launch into{" "}
+        <span className="text-gold">repeatable revenue.</span>
       </>
     ),
     subtitle:
-      "Helping ambitious brands uncover what makes them different — and become impossible to ignore.",
+      "I'm studying how customers discover, adopt, pay for, and stay with software products and what founders can do when growth doesn't happen as expected.",
     focus: "50% 25%",
   },
   {
     image: "/images/khloe-bw.jpg",
     alt: "Khloe Obiegbu portrait",
-    eyebrow: "Clarity before marketing",
+    eyebrow: "The founder's reality",
     title: (
       <>
-        Decide what you <span className="text-gold">stand for.</span>
+        What really happens <span className="text-gold">after launch?</span>
       </>
     ),
     subtitle:
-      "When your positioning is clear, content, sales, and growth all get dramatically easier.",
+      "What founders say, what they struggle with, and what happens behind the scenes once the market has to respond.",
     focus: "50% 20%",
   },
   {
     image: "/images/khloe-contact.jpg",
     alt: "Khloe Obiegbu studio portrait",
-    eyebrow: "Own your space",
+    eyebrow: "The customer side",
     title: (
       <>
-        Stop <span className="text-gold">blending in.</span>
+        Why people switch, stay, <span className="text-gold">and pay.</span>
       </>
     ),
     subtitle:
-      "Own a position your best clients can't confuse with anyone else in the market.",
+      "Why people hesitate, adopt, or keep using what they already know — and what earns their trust.",
     focus: "50% 18%",
   },
   {
     image: "/images/khloe-hero.jpg",
     alt: "Khloe Obiegbu",
-    eyebrow: "Built to last",
+    eyebrow: "The GTM system",
     title: (
       <>
-        Strategy that <span className="text-gold">compounds.</span>
+        Find the constraint. <span className="text-gold">Test the fix.</span>
       </>
     ),
     subtitle:
-      "Build authority and brand recognition that outlast trends, algorithms, and noise.",
+      "How product, market, acquisition, activation, retention, and monetization connect — and where they break.",
     focus: "50% 22%",
   },
 ];
@@ -132,7 +133,7 @@ export default function HeroSlider() {
             {SLIDES[index].eyebrow}
           </span>
           <h1
-            className="heading-xl mt-5 animate-slide-in text-[2.7rem] leading-[0.95] sm:text-6xl lg:text-7xl"
+            className="heading-xl mt-5 animate-slide-in text-[2.4rem] leading-[0.98] sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "90ms" }}
           >
             {SLIDES[index].title}
@@ -147,12 +148,13 @@ export default function HeroSlider() {
             className="mt-9 flex animate-slide-in flex-wrap items-center gap-3"
             style={{ animationDelay: "270ms" }}
           >
-            <Link href="/contact" className="btn-gold text-base">
-              Book a Strategy Session
-              <span aria-hidden>→</span>
+            <Link href="/about" className="btn-gold text-base">
+              Explore my journey
+              <span aria-hidden>↗</span>
             </Link>
-            <Link href="/services" className="btn-ghost-light text-base">
-              Explore My Approach
+            <Link href="/field-notes" className="btn-ghost-light text-base">
+              Read my field notes
+              <span aria-hidden>↗</span>
             </Link>
           </div>
         </div>

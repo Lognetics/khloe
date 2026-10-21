@@ -7,11 +7,17 @@ export default function Footer() {
       {/* CTA band */}
       <div className="border-b border-white/10">
         <div className="container-x flex flex-col items-start gap-6 py-14 md:flex-row md:items-center md:justify-between md:py-20">
-          <h2 className="heading-xl max-w-xl text-3xl md:text-5xl">
-            Ready to stop <span className="text-gold">blending in?</span>
-          </h2>
-          <Link href="/contact" className="btn-gold text-base">
-            Book a Strategy Session
+          <div className="max-w-2xl">
+            <h2 className="heading-xl text-3xl md:text-5xl">
+              Built a SaaS product and <span className="text-gold">struggling to get traction?</span>
+            </h2>
+            <p className="mt-5 max-w-xl text-white/60">
+              I&apos;m interested in learning from founders navigating the messy stage between
+              launch and repeatable revenue.
+            </p>
+          </div>
+          <Link href="/work-with-me#contact" className="btn-gold shrink-0 text-base">
+            Tell me what you&apos;re working through
             <span aria-hidden>→</span>
           </Link>
         </div>
@@ -49,23 +55,25 @@ export default function Footer() {
 
         <div>
           <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
-            The Positioning Journal
+            Say hello
           </h3>
-          <p className="mt-4 text-sm text-white/60">
-            Weekly strategic insights for founders who want to lead, not just exist online.
-          </p>
-          <form className="mt-4 flex gap-2" action="/contact">
-            <input
-              type="email"
-              required
-              placeholder="you@company.com"
-              aria-label="Email address"
-              className="min-w-0 flex-1 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-offwhite placeholder:text-white/35 focus:border-gold focus:outline-none"
-            />
-            <button type="submit" className="btn-gold px-5 py-2.5 text-sm">
-              Join
-            </button>
-          </form>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            <li>
+              <a href={`mailto:${SITE.email}`} className="text-white/70 transition-colors hover:text-gold">
+                {SITE.email}
+              </a>
+            </li>
+            <li>
+              <a href={SITE.linkedin} target="_blank" rel="noreferrer" className="text-white/70 transition-colors hover:text-gold">
+                LinkedIn — {SITE.name}
+              </a>
+            </li>
+            <li>
+              <a href={SITE.instagram} target="_blank" rel="noreferrer" className="text-white/70 transition-colors hover:text-gold">
+                Instagram — @{SITE.instagramHandle}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -74,7 +82,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {SITE.name}. {SITE.role}.
           </p>
-          <p>{SITE.tagline} — clarity before marketing.</p>
+          <p>From launch to repeatable revenue.</p>
         </div>
       </div>
     </footer>

@@ -2,7 +2,7 @@
   "name": "khloe-obiegbu",
   "version": "0.1.0",
   "private": true,
-  "description": "The Nerdy Strategist — Brand Positioning Strategist website for Khloe Obiegbu",
+  "description": "Khloe Obiegbu — Building GTM Expertise",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -13,23 +13,23 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://khloeobiegbu.com"),
   title: {
-    default: "Khloe Obiegbu — Brand Positioning Strategist",
+    default: "Khloe Obiegbu — Building GTM Expertise",
     template: "%s · Khloe Obiegbu",
   },
   description:
-    "Your business doesn't need more attention. It needs better positioning. Khloe Obiegbu helps startups and growing businesses uncover what makes them different and attract clients who value what they offer.",
+    "Exploring what it takes to turn a SaaS launch into repeatable revenue. Field notes on how customers discover, adopt, pay for, and stay with software products.",
   keywords: [
-    "brand positioning strategist",
-    "brand strategy",
-    "founder branding",
-    "market differentiation",
-    "messaging strategy",
+    "go-to-market",
+    "GTM strategy",
+    "SaaS growth",
+    "post-launch",
+    "customer behaviour",
+    "founder interviews",
     "Khloe Obiegbu",
   ],
   openGraph: {
-    title: "Khloe Obiegbu — Brand Positioning Strategist",
-    description:
-      "Stop competing for attention. Start owning your position.",
+    title: "Khloe Obiegbu — Building GTM Expertise",
+    description: "Exploring what it takes to turn a SaaS launch into repeatable revenue.",
     type: "website",
   },
 };

@@ -61,8 +61,8 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link href="/contact" className="btn-primary hidden md:inline-flex">
-            Book a Strategy Session
+          <Link href="/work-with-me#contact" className="btn-primary hidden md:inline-flex">
+            Let&apos;s talk
           </Link>
           <button
             type="button"
@@ -110,8 +110,8 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-primary mt-2 w-full">
-            Book a Strategy Session
+          <Link href="/work-with-me#contact" className="btn-primary mt-2 w-full">
+            Let&apos;s talk
           </Link>
         </div>
       </div>

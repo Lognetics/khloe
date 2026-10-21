@@ -1,12 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import { SITE } from "@/lib/content";
 
-const REVENUE_STAGES = [
-  "Pre-revenue / just starting",
-  "Early revenue (<$10k/mo)",
-  "Growing ($10k–$50k/mo)",
-  "Established ($50k+/mo)",
+const STAGES = [
+  "Pre-launch",
+  "Launched, few or no paying customers",
+  "Some revenue, not yet repeatable",
+  "Growing, but something's stuck",
+];
+
+const FIELDS: [string, string][] = [
+  ["name", "Name"],
+  ["company", "Product"],
+  ["website", "Website"],
+  ["email", "Email"],
+  ["stage", "Stage"],
+  ["challenge", "What I'm working through"],
+  ["tried", "What I've tried"],
 ];
 
 export default function ContactForm() {
@@ -26,10 +37,14 @@ export default function ContactForm() {
             />
           </svg>
         </span>
-        <h3 className="mt-6 font-display text-2xl font-semibold">Thank you — message received.</h3>
+        <h3 className="mt-6 font-display text-2xl font-semibold">Your email is ready to send.</h3>
         <p className="mt-3 max-w-md text-muted">
-          I&apos;ll be in touch within two business days to find a time. In the meantime, your
-          biggest competitor for attention is a blurry version of yourself.
+          Your email app should have opened with everything filled in — just hit send. If it
+          didn&apos;t, email me at{" "}
+          <a href={`mailto:${SITE.email}`} className="font-medium text-charcoal underline">
+            {SITE.email}
+          </a>
+          .
         </p>
         <button type="button" onClick={() => setSubmitted(false)} className="btn-outline mt-7">
           Send another →
@@ -42,30 +57,33 @@ export default function ContactForm() {
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        const data = new FormData(e.currentTarget);
+        const body = FIELDS.map(([key, label]) => `${label}: ${data.get(key) ?? ""}`).join("\n\n");
+        const subject = `What I'm working through — ${data.get("company") || data.get("name")}`;
+        window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         setSubmitted(true);
       }}
       className="rounded-[2rem] border border-charcoal/10 bg-white p-7 md:p-10"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Name" name="name" placeholder="Your full name" required />
-        <Field label="Company" name="company" placeholder="Company name" required />
-        <Field label="Industry" name="industry" placeholder="e.g. Fintech, SaaS, Retail" />
+        <Field label="Product" name="company" placeholder="What you're building" required />
         <Field label="Website" name="website" type="url" placeholder="https://" />
+        <Field label="Email" name="email" type="email" placeholder="you@company.com" required />
       </div>
 
-      <div className="mt-5 grid gap-5 sm:grid-cols-2">
-        <Field label="Email" name="email" type="email" placeholder="you@company.com" required />
+      <div className="mt-5">
         <div>
-          <Label>Revenue stage</Label>
+          <Label>Where are you right now?</Label>
           <select
-            name="revenue"
+            name="stage"
             defaultValue=""
             className="w-full rounded-xl border border-charcoal/15 bg-offwhite px-4 py-3 text-sm focus:border-charcoal focus:outline-none"
           >
             <option value="" disabled>
               Select a stage
             </option>
-            {REVENUE_STAGES.map((s) => (
+            {STAGES.map((s) => (
               <option key={s}>{s}</option>
             ))}
           </select>
@@ -73,30 +91,31 @@ export default function ContactForm() {
       </div>
 
       <div className="mt-5">
-        <Label>Your biggest challenge</Label>
+        <Label>What are you working through?</Label>
         <textarea
           name="challenge"
-          rows={3}
-          placeholder="Where does your brand feel unclear, generic, or hard to explain?"
+          rows={4}
+          required
+          placeholder="People aren't buying, users aren't activating, customers are leaving, sales aren't repeatable…"
           className="w-full rounded-xl border border-charcoal/15 bg-offwhite px-4 py-3 text-sm focus:border-charcoal focus:outline-none"
         />
       </div>
 
       <div className="mt-5">
-        <Label>Goals</Label>
+        <Label>What have you tried so far?</Label>
         <textarea
-          name="goals"
+          name="tried"
           rows={2}
-          placeholder="What would success look like in the next 6–12 months?"
+          placeholder="Channels, experiments, changes — and what happened"
           className="w-full rounded-xl border border-charcoal/15 bg-offwhite px-4 py-3 text-sm focus:border-charcoal focus:outline-none"
         />
       </div>
 
       <button type="submit" className="btn-primary mt-7 w-full text-base">
-        Request my strategy session →
+        Send it over →
       </button>
       <p className="mt-4 text-center text-xs text-muted">
-        Prefer to book directly? A calendar will be embedded here once scheduling is connected.
+        This opens your email app with your answers filled in.
       </p>
     </form>
   );
