@@ -2,6 +2,7 @@
 
 export const SITE = {
   name: "Khloe Obiegbu",
+  logo: "Khloe SaaS Strategist",
   role: "Building GTM Expertise",
   tagline: "Building GTM Expertise",
   email: "khloeobiegbu@gmail.com",

@@ -35,7 +35,7 @@ export default function Navbar() {
             KO
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-display text-[15px] font-semibold tracking-tight">{SITE.name}</span>
+            <span className="font-display text-[15px] font-semibold tracking-tight">{SITE.logo}</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted">{SITE.tagline}</span>
           </span>
         </Link>

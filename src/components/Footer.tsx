@@ -31,7 +31,7 @@ export default function Footer() {
             <span className="grid h-9 w-9 place-items-center rounded-full bg-gold text-charcoal font-display text-sm font-semibold">
               KO
             </span>
-            <span className="font-display text-base font-semibold">{SITE.name}</span>
+            <span className="font-display text-base font-semibold">{SITE.logo}</span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">{SITE.shortBio}</p>
         </div>
