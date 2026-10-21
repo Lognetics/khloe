@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { FOOTER_LINKS, SITE } from "@/lib/content";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-offwhite">
+    <footer className="surface-dark">
       {/* CTA band */}
       <div className="border-b border-white/10">
         <div className="container-x flex flex-col items-start gap-6 py-14 md:flex-row md:items-center md:justify-between md:py-20">
@@ -57,23 +58,18 @@ export default function Footer() {
           <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
             Say hello
           </h3>
-          <ul className="mt-4 space-y-2.5 text-sm">
-            <li>
-              <a href={`mailto:${SITE.email}`} className="text-white/70 transition-colors hover:text-gold">
-                {SITE.email}
-              </a>
-            </li>
-            <li>
-              <a href={SITE.linkedin} target="_blank" rel="noreferrer" className="text-white/70 transition-colors hover:text-gold">
-                LinkedIn — {SITE.name}
-              </a>
-            </li>
-            <li>
-              <a href={SITE.instagram} target="_blank" rel="noreferrer" className="text-white/70 transition-colors hover:text-gold">
-                Instagram — @{SITE.instagramHandle}
-              </a>
-            </li>
-          </ul>
+          <p className="mt-4 text-sm text-white/60">
+            Building something? I&apos;d love to hear what you&apos;re working through.
+          </p>
+          <div className="mt-5">
+            <SocialLinks />
+          </div>
+          <a
+            href={`mailto:${SITE.email}`}
+            className="mt-5 inline-block text-sm text-white/70 underline-offset-4 transition-colors hover:text-gold hover:underline"
+          >
+            {SITE.email}
+          </a>
         </div>
       </div>
 

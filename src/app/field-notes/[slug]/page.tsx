@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import NoteCard from "@/components/NoteCard";
 import Photo from "@/components/Photo";
+import ReadingProgress from "@/components/ReadingProgress";
 import { FIELD_NOTES, readTime, type Block } from "@/lib/content";
 
 type Params = { params: { slug: string } };
@@ -22,11 +23,13 @@ export default function FieldNotePage({ params }: Params) {
   if (!note) notFound();
 
   const others = FIELD_NOTES.filter((n) => n.slug !== note.slug);
+  const sections = note.blocks.flatMap((b) => (b.type === "h2" ? [b.text] : []));
 
   return (
     <>
+      <ReadingProgress />
       {/* HEADER */}
-      <section className="bg-charcoal text-offwhite">
+      <section className="surface-dark">
         <div className="container-x py-16 md:py-24">
           <Link href="/field-notes" className="text-sm text-white/50 transition-colors hover:text-gold">
             ← All field notes
@@ -53,13 +56,38 @@ export default function FieldNotePage({ params }: Params) {
       </div>
 
       {/* BODY */}
-      <article className="container-x py-14 md:py-20">
-        <div className="mx-auto max-w-2xl">
-          {note.blocks.map((b, i) => (
-            <BlockView key={i} block={b} />
-          ))}
+      <div className="container-x py-14 md:py-20">
+        <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[13rem_1fr]">
+          {sections.length > 1 ? (
+            <aside className="hidden lg:block">
+              <nav aria-label="In this note" className="sticky top-28">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
+                  In this note
+                </p>
+                <ol className="mt-4 space-y-3 border-l border-charcoal/10">
+                  {sections.map((t) => (
+                    <li key={t}>
+                      <a
+                        href={`#${slugify(t)}`}
+                        className="-ml-px block border-l border-transparent pl-4 text-sm leading-snug text-muted transition-colors hover:border-gold hover:text-charcoal"
+                      >
+                        {t}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </aside>
+          ) : (
+            <div className="hidden lg:block" />
+          )}
+          <article className="max-w-2xl">
+            {note.blocks.map((b, i) => (
+              <BlockView key={i} block={b} />
+            ))}
+          </article>
         </div>
-      </article>
+      </div>
 
       {/* CTA */}
       <section className="border-t border-charcoal/10 bg-white py-16 md:py-20">
@@ -95,11 +123,21 @@ export default function FieldNotePage({ params }: Params) {
   );
 }
 
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 function BlockView({ block }: { block: Block }) {
   switch (block.type) {
     case "h2":
       return (
-        <h2 className="heading-xl mb-5 mt-14 text-3xl leading-tight first:mt-0 md:text-[2.1rem]">
+        <h2
+          id={slugify(block.text)}
+          className="heading-xl mb-5 mt-14 scroll-mt-28 text-3xl leading-tight first:mt-0 md:text-[2.1rem]"
+        >
           {block.text}
         </h2>
       );

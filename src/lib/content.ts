@@ -5,10 +5,9 @@ export const SITE = {
   role: "Building GTM Expertise",
   tagline: "Building GTM Expertise",
   email: "khloeobiegbu@gmail.com",
-  instagram: "https://instagram.com/khloe_obiegbu",
+  instagram: "https://www.instagram.com/khloe_obiegbu",
   instagramHandle: "khloe_obiegbu",
-  // TODO: replace with the exact LinkedIn profile URL
-  linkedin: "https://www.linkedin.com/search/results/all/?keywords=Khloe%20Obiegbu",
+  linkedin: "https://www.linkedin.com/in/onyinye-obiegbu-",
   shortBio:
     "Exploring what it takes to turn a SaaS launch into repeatable revenue — how customers discover, adopt, pay for, and stay with software products.",
 };
@@ -43,21 +42,80 @@ export const EXPLORING = [
   },
 ];
 
+export const PROOF = [
+  { value: "270+", label: "Businesses onboarded at Netics AI in 2 months" },
+  { value: "MD", label: "Managing Director at Lognetics" },
+  { value: "2021 → now", label: "Banking, copywriting, brand strategy, then GTM" },
+];
+
+export const SYMPTOMS = [
+  { stage: "Acquisition", question: "Why aren't people buying?" },
+  { stage: "Activation", question: "Why aren't users activating?" },
+  { stage: "Retention", question: "Why are customers leaving?" },
+  { stage: "Monetization", question: "Why don't early sales repeat?" },
+];
+
+export const METHOD = [
+  { title: "Observe", body: "What customers actually do, not what we assume." },
+  { title: "Hypothesize", body: "Name the constraint and why it might exist." },
+  { title: "Experiment", body: "Test the right intervention, not more activity." },
+  { title: "Measure", body: "Activation, repeat usage, revenue. Not just views." },
+  { title: "Decide", body: "Keep what the evidence supports. Change the rest." },
+];
+
 /* --------------------------------------------------------------- ABOUT */
 
-export const ABOUT_STORY = [
-  "Where do I even start??? First of all, tech was never in the plans for my life, I still look back and wonder how I got here, like seriously!!!!! Who knew I'd be THIS girlie.",
-  "After University, I got a bank job in 2021 because at the moment that was what was available, even though I knew that wasn't a long term thing, I'm sure my fellow Nigerians know what I'm talking about.",
-  "I won't say that was a waste of my time because it honestly wasn't, that was the start of me coming out of my shell, back in uni anyone who knew me would say I was a complete loner and introvert, and yes I still wonder how I made friends because indeed I was.",
-  "So that job was a good start, and then I quit because I wanted freedom, even though I didn't know what that meant. In 2024 I completely switched lanes and went into copywriting, and I must say I've always been a writer, used to write short movies, and even as a songwriter, so it came pretty natural to me.",
-  "Fast forward 2025, I said hold onnnn, why do people even need copywriting, then I geared into the whole branding and marketing strategy phase. I was curious about the whole idea of psychology and using content to make sales.",
-  "I wasn't getting as many clients as I'd hoped though, so againnnn, I decided to step out of my comfort zone and boyyyyy, that was how the whole tech thing began. I met a founder, my first client in tech, he was so sweet and kind even though I'd never had experience in tech.",
-  "I was learning on the job, bringing in my 2 years of knowledge about marketing and copywriting but trying to fit it into the tech space. There was a lot of market research, testing strategies, speaking with potential leads trying to pitch the product, I was soooooo shyyyy, but repetition does something to your brain chemistry I must say.",
-  "Makes you want to confront the next hurdle because now you know what success and failure feel like, you're bolder and want to do more.",
-  "Fast forward againnnnn to the best job of my life, working as a marketing director for 6 months and now managing director at Lognetics. Honestly when I was handed this role, I wasn't so sure of myself and if I could even bring anything to the table.",
-  "But when you're surrounded with people who are intentional and want you to grow with them, everything just kinda works out. From there I got obsessed with understanding the tech ecosystem, started having proper talks with actual founders.",
-  "Did so much market research my brain and eyes practically fell out, but guess I'm a sucker for knowledge so I dug deep inside the rabbit hole and ended up at GTM. I understood the whole end to end process but I wanted to know what breaks down in between.",
-  "There's so many frameworks about the individual parts in tech, but nothing really tells you what to do when some parts don't work, and how do you really turn your startup into a scalable business?",
+export const ABOUT_INTRO =
+  "Where do I even start??? First of all, tech was never in the plans for my life, I still look back and wonder how I got here, like seriously!!!!! Who knew I'd be THIS girlie.";
+
+export const ABOUT_CHAPTERS = [
+  {
+    marker: "2021",
+    title: "The bank job",
+    paras: [
+      "After University, I got a bank job in 2021 because at the moment that was what was available, even though I knew that wasn't a long term thing, I'm sure my fellow Nigerians know what I'm talking about.",
+      "I won't say that was a waste of my time because it honestly wasn't, that was the start of me coming out of my shell, back in uni anyone who knew me would say I was a complete loner and introvert, and yes I still wonder how I made friends because indeed I was.",
+    ],
+  },
+  {
+    marker: "2024",
+    title: "Switching lanes",
+    paras: [
+      "So that job was a good start, and then I quit because I wanted freedom, even though I didn't know what that meant. In 2024 I completely switched lanes and went into copywriting, and I must say I've always been a writer, used to write short movies, and even as a songwriter, so it came pretty natural to me.",
+    ],
+  },
+  {
+    marker: "2025",
+    title: "Hold onnnn…",
+    paras: [
+      "Fast forward 2025, I said hold onnnn, why do people even need copywriting, then I geared into the whole branding and marketing strategy phase. I was curious about the whole idea of psychology and using content to make sales.",
+    ],
+  },
+  {
+    marker: "First client in tech",
+    title: "Learning on the job",
+    paras: [
+      "I wasn't getting as many clients as I'd hoped though, so againnnn, I decided to step out of my comfort zone and boyyyyy, that was how the whole tech thing began. I met a founder, my first client in tech, he was so sweet and kind even though I'd never had experience in tech.",
+      "I was learning on the job, bringing in my 2 years of knowledge about marketing and copywriting but trying to fit it into the tech space. There was a lot of market research, testing strategies, speaking with potential leads trying to pitch the product, I was soooooo shyyyy, but repetition does something to your brain chemistry I must say.",
+      "Makes you want to confront the next hurdle because now you know what success and failure feel like, you're bolder and want to do more.",
+    ],
+  },
+  {
+    marker: "Lognetics",
+    title: "Marketing Director → Managing Director",
+    paras: [
+      "Fast forward againnnnn to the best job of my life, working as a marketing director for 6 months and now managing director at Lognetics. Honestly when I was handed this role, I wasn't so sure of myself and if I could even bring anything to the table.",
+      "But when you're surrounded with people who are intentional and want you to grow with them, everything just kinda works out. From there I got obsessed with understanding the tech ecosystem, started having proper talks with actual founders.",
+    ],
+  },
+  {
+    marker: "Now",
+    title: "Down the GTM rabbit hole",
+    paras: [
+      "Did so much market research my brain and eyes practically fell out, but guess I'm a sucker for knowledge so I dug deep inside the rabbit hole and ended up at GTM. I understood the whole end to end process but I wanted to know what breaks down in between.",
+      "There's so many frameworks about the individual parts in tech, but nothing really tells you what to do when some parts don't work, and how do you really turn your startup into a scalable business?",
+    ],
+  },
 ];
 
 export const FOR_FREE = [
