@@ -95,7 +95,7 @@ export default function ResourcesPage() {
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <Link href="/work-with-me" className="btn-primary text-base">
+            <Link href="/gtm-revenue-sprint" className="btn-primary text-base">
               See the {SPRINT.name} →
             </Link>
           </Reveal>

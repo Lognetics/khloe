@@ -428,3 +428,72 @@ export const SPRINT = {
     { title: "Make it repeatable", body: "Keep what customer behaviour proves works, and decide what to do next." },
   ],
 };
+
+/* -------------------------------------------------- GTM REVENUE SPRINT */
+
+export const SPRINT_PAGE = {
+  headline: "You have a product but are you making consistent revenue month after month?",
+  intro: [
+    "You've launched, acquired users, got some paid subscriptions, but growth still feels unpredictable.",
+    "One month customers come in, next month they don't, users sign up but don't activate, customers try the product but disappear.",
+    "Your team keeps saying, you need more marketing, but you're not sure that's actually the problem.",
+  ],
+  introClose: "That's what the GTM Revenue Sprint is built to solve.",
+  brokenLink: "Find the broken link between your product, customers and revenue.",
+  stages: ["Product", "Market", "Adoption", "Retention", "Revenue", "Repeatability", "Scale"],
+  constraint: [
+    "Then we identify the single biggest constraint preventing your company from growing predictably.",
+    "And instead of handing you another strategy document, we test a real intervention.",
+  ],
+  questions: [
+    { stage: "Product", question: "Are we solving a painful enough problem?" },
+    { stage: "Market", question: "Are we reaching the right customers?" },
+    { stage: "Adoption", question: "Why are people buying or not buying?" },
+    { stage: "Retention", question: "Why do customers stay or leave?" },
+    { stage: "Revenue", question: "Why do users pay or not pay?" },
+    { stage: "Repeatability", question: "Can we reproduce the process every month?" },
+    { stage: "Scale", question: "Can we grow without breaking the economics?" },
+  ],
+  steps: [
+    { title: "Diagnose", body: ["We audit your product, market, funnel, customer behaviour, retention and revenue."] },
+    { title: "Find the bottleneck", body: ["We identify the highest-leverage constraint.", "Not 15 problems.", "The one that matters most right now."] },
+    { title: "Design the intervention", body: ["We develop a specific hypothesis based on customer and business evidence."] },
+    { title: "Run the experiment", body: ["We put the intervention into the market."] },
+    { title: "Measure", body: ["We compare the result against the baseline."] },
+    { title: "Build the next move", body: ["You leave with a 60-day roadmap based on evidence."] },
+  ],
+  forYou: [
+    "You've already launched.",
+    "You have some users, customers or traction.",
+    "You're struggling to make acquisition consistent.",
+    "Users aren't activating as expected.",
+    "Customers aren't staying.",
+    "Revenue is inconsistent.",
+    "Your founder is still driving most of the sales.",
+    "You don't know which growth problem to solve first.",
+    "You're tired of guessing.",
+  ],
+  notForYou: [
+    "You're still validating the idea.",
+    "You haven't built the product.",
+    "You have no customers or meaningful usage to analyse.",
+    "You're looking for someone to “just run marketing.”",
+    "You're looking for vanity metrics.",
+  ],
+  result: [
+    { word: "Where", text: "growth is breaking." },
+    { word: "Why", text: "it's breaking." },
+    { word: "What", text: "to change." },
+    { word: "What", text: "happened when we changed it." },
+    { word: "What", text: "to do next." },
+  ],
+  offer: [
+    "21 days.",
+    "One bottleneck.",
+    "One intervention.",
+    "Real market feedback.",
+    "A measurable growth outcome.",
+  ],
+  price: "₦500,000",
+  applyHref: "/work-with-me#contact",
+};

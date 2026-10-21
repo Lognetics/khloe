@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import PageHeader from "@/components/PageHeader";
 import Photo from "@/components/Photo";
@@ -23,9 +24,14 @@ export default function WorkWithMePage() {
         }
         subtitle={SPRINT.summary}
       >
-        <a href="#contact" className="btn-gold mt-9 text-base">
-          Tell me what you&apos;re working through →
-        </a>
+        <div className="mt-9 flex flex-wrap gap-3">
+          <Link href="/gtm-revenue-sprint" className="btn-gold text-base">
+            See the full Sprint →
+          </Link>
+          <a href="#contact" className="btn-ghost-light text-base">
+            Tell me what you&apos;re working through
+          </a>
+        </div>
       </PageHeader>
 
       {/* SOUND FAMILIAR */}
